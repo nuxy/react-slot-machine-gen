@@ -47,7 +47,7 @@ SlotMachine.defaultProps = {
 
 SlotMachine.propTypes = {
   id: PropTypes.string,
-  play: PropTypes.boolean,
+  play: PropTypes.bool,
   reels: PropTypes.array.isRequired,
   callback: PropTypes.func,
   options: PropTypes.object

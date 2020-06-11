@@ -113,9 +113,27 @@ const reels = [
 ];
 
 class Demo extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      play: false
+    };
+  }
+
+  playEvent() {
+    this.setState({
+      play: !this.state.play
+    });
+  }
+
   render() {
     return (
-      <SlotMachine reels={reels} />
+      <React.Fragment>
+        <SlotMachine reels={reels} play={this.state.play} />
+
+        <button id="play-button" onClick={() => this.playEvent()}>Play</button>
+      </React.Fragment>
     );
   }
 };
