@@ -1,6 +1,6 @@
 {
   "name": "react-slot-machine-gen",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Create an extremely biased, web-based slot machine game.",
   "main": "src/react-slot-machine.js",
   "scripts": {
@@ -14,6 +14,7 @@
     "url": "git+https://github.com/nuxy/react-slot-machine-gen.git"
   },
   "keywords": [
+    "javascript",
     "react",
     "react-component",
     "animation",
