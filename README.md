@@ -1,4 +1,4 @@
-# Slot Machine Generator
+# React Slot Machine Generator [![npm version](https://badge.fury.io/js/react-slot-machine-gen.svg)](https://badge.fury.io/js/react-slot-machine-gen) [![](https://img.shields.io/npm/dm/react-slot-machine-gen)](https://www.npmjs.com/package/react-slot-machine-gen)
 
 Create an extremely biased, web-based slot machine game.
 
@@ -20,9 +20,83 @@ Checkout the [demo](https://nuxy.github.io/slot-machine-gen) for examples of use
 
 ## Installation
 
-Install the package into your project using [NPM](https://npmjs.com), or download the [sources](https://github.com/nuxy/react-slot-machine-gen/archive/master.zip).
+Add to an existing [React](https://reactjs.org) project using [YARN](https://yarnpkg.com).
 
-    $ npm install react-slot-machine-gen
+    $ yarn add react-slot-machine-gen
+
+## Usage
+
+```javascript
+import React       from 'react';
+import ReactDOM    from 'react-dom';
+import SlotMachine from '../dist/react-slot-machine';
+
+const reels = [
+  {
+    imageSrc: 'path/to/image.png',
+    symbols: [
+      {
+        title: 'cherry',
+        position: 100,
+        weight: 2
+      },
+      {
+        title: 'plum',
+        position: 300,
+        weight: 6
+      },
+      {
+        title: 'orange',
+        position: 500,
+        weight: 5
+      },
+      {
+        title: 'bell',
+        position: 700,
+        weight: 1
+      },
+      {
+        title: 'cherry',
+        position: 900,
+        weight: 3
+      },
+      {
+        title: 'plum',
+        position: 1100,
+        weight: 5
+      }
+    }
+  },
+
+  // add more reels ...
+]
+
+export default class Demo extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      play: false
+    };
+  }
+
+  playEvent() {
+    this.setState({
+      play: !this.state.play
+    });
+  }
+
+  render() {
+    return (
+      <React.Fragment>
+        <SlotMachine reels={reels} play={this.state.play} />
+
+        <button id="play-button" onClick={() => this.playEvent()}>Play</button>
+      </React.Fragment>
+    );
+  }
+};
+```
 
 ## Documentation
 
