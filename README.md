@@ -28,7 +28,6 @@ Add to an existing [React](https://reactjs.org) project using [YARN](https://yar
 
 ```javascript
 import React       from 'react';
-import ReactDOM    from 'react-dom';
 import SlotMachine from '../dist/react-slot-machine';
 
 const reels = [
@@ -100,6 +99,7 @@ export default class Demo extends React.Component {
 
 ## Documentation
 
+- [Methods](https://github.com/nuxy/slot-machine-gen#methods)
 - [Reels configuration](https://github.com/nuxy/slot-machine-gen#reels-configuration)
 - [Game options](https://github.com/nuxy/slot-machine-gen#game-options)
 - [Customizing symbols](https://github.com/nuxy/slot-machine-gen#customizing-symbols)
