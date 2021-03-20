@@ -97,6 +97,15 @@ export default class Demo extends React.Component {
 };
 ```
 
+## Component Props
+
+| Name     | Type     | Description               |
+|----------|----------|---------------------------|
+| reels    | Array    | Symbols configuration.    |
+| play     | Boolean  | Spins the reels if `true` |
+| callback | Function | Returns winning symbols.  |
+| options  | Object   | Override game [defaults](https://github.com/nuxy/slot-machine-gen#reels-configuration). |
+
 ## Documentation
 
 - [Methods](https://github.com/nuxy/slot-machine-gen#methods)
