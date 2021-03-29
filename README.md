@@ -26,9 +26,11 @@ Add to an existing [React](https://reactjs.org) project using [YARN](https://yar
 
 ## Usage
 
+Create a SlotMachine component as shown in this [file](https://github.com/nuxy/react-slot-machine-gen/blob/master/src/react-slot-machine.js) or just paste this file into your code.  Wherever you want to render your SlotMachine, import the component and create a `reels` array and a function to `play` the slot machine.  E.g: 
+
 ```javascript
 import React       from 'react';
-import SlotMachine from '../dist/react-slot-machine';
+import SlotMachine from [path to SlotMachineCompoenent e.g. './react-slot-machine'];
 
 const reels = [
   {
@@ -69,6 +71,7 @@ const reels = [
 
   // add more reels ...
 ]
+
 
 export default class Demo extends React.Component {
   constructor() {
