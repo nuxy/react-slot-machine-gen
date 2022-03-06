@@ -3,6 +3,14 @@ import ReactDOM    from 'react-dom';
 import SlotMachine from '../dist/react-slot-machine';
 
 const imageUrl = 'https://nuxy.github.io/slot-machine-gen/images';
+const soundUrl = 'https://nuxy.github.io/slot-machine-gen/sounds';
+
+const options = {
+  sounds: {
+    reelsBegin:`${soundUrl}/reelsBegin.mp3`,
+    reelsEnd: `${soundUrl}/reelsEnd.mp3`,
+  }
+};
 
 const reels = [
   {
@@ -112,6 +120,14 @@ const reels = [
   }
 ];
 
+const callback = function(payLine) {
+  console.log(payLine[0].title + ' | ' + payLine[1].title + ' | ' + payLine[2].title);
+
+  if (payLine[0].title === payLine[1].title && payLine[0].title === payLine[2].title) {
+    (new Audio(`${soundUrl}/winner.mp3`)).play();
+  }
+};
+
 class Demo extends React.Component {
   constructor() {
     super();
@@ -130,7 +146,7 @@ class Demo extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <SlotMachine reels={reels} play={this.state.play} />
+        <SlotMachine reels={reels} options={options} callback={callback} play={this.state.play} />
 
         <button id="play-button" onClick={() => this.playEvent()}>Play</button>
       </React.Fragment>
