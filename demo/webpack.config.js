@@ -1,6 +1,6 @@
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const path              = require('path');
-const webpack           = require('webpack');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path                 = require('path');
+const webpack              = require('webpack');
 
 module.exports = {
   entry: path.join(__dirname, 'index.js'),
@@ -8,14 +8,14 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract('css-loader')
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
       {
         test: /\.jsx?$/,
         loader: 'babel-loader',
         exclude: /node_modules/,
         query: {
-            presets: ['es2015', 'react']
+          presets: ['es2015', 'react']
         }
       }
     ]
@@ -26,7 +26,7 @@ module.exports = {
     filename: 'bundle.js',
   },
   plugins: [
-    new ExtractTextPlugin('bundle.css')
+    new MiniCssExtractPlugin({filename: 'bundle.css'})
   ],
   resolve: {
     extensions: ['.js']
