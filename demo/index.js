@@ -152,6 +152,6 @@ class Demo extends React.Component {
       </React.Fragment>
     );
   }
-};
+}
 
 ReactDOM.render(<Demo />, document.getElementById('main'));

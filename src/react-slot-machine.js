@@ -38,7 +38,7 @@ class SlotMachine extends React.Component {
       <div id={this.props.id} className="slot-machine" ref="wrapper"></div>
     );
   }
-};
+}
 
 SlotMachine.defaultProps = {
   id: 'slot-machine',
