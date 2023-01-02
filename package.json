@@ -7,7 +7,6 @@
     "build": "node_modules/.bin/babel src -s -D -d dist",
     "lint": "node_modules/.bin/eslint --ignore-path .gitignore demo src",
     "webpack": "node_modules/.bin/webpack-cli ./demo/index.js --config demo/webpack.config.js --output-path demo/assets",
-    "postinstall": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
