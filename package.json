@@ -30,7 +30,7 @@
   "dependencies": {
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
-    "slot-machine-gen": "^1.2.0"
+    "slot-machine-gen": "^1.2.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.18.6",
