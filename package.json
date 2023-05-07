@@ -4,9 +4,10 @@
   "description": "Create an extremely biased, web-based slot machine game.",
   "main": "src/react-slot-machine.js",
   "scripts": {
-    "build": "node_modules/.bin/babel src -s -D -d dist",
-    "lint": "node_modules/.bin/eslint --ignore-path .gitignore demo src",
-    "webpack": "node_modules/.bin/webpack-cli ./demo/index.js --config demo/webpack.config.js --output-path demo/assets",
+    "build": "babel src -s -D -d dist",
+    "lint": "eslint --ignore-path .gitignore demo src",
+    "prepack": "npm run build",
+    "webpack": "webpack-cli ./demo/index.js --config demo/webpack.config.js --output-path demo/assets",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
