@@ -1,5 +1,6 @@
 .babelrc
 .eslintrc
 .vscode
+ISSUE_TEMPLATE.md
 demo
 node_modules
