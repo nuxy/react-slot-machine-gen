@@ -54,7 +54,9 @@ latest
 
 18.0.0
 
-- [ ] Application created with [create-react-app](https://create-react-app.dev/docs/getting-started)`
+Since I cannot be reproduce this issue using the package provided demo in a new project, I'm going to need some information about your app setup. Notably, the following items:
+
+- [ ] Application created with [create-react-app](https://create-react-app.dev/docs/getting-started)
 - [ ] JSX enabled application (provide [Webpack](https://webpack.js.org) config sample)
 - [ ] I have successfully run the [demo](https://github.com/nuxy/react-slot-machine-gen/tree/master/demo)
 
