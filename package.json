@@ -30,29 +30,29 @@
   "license": "MIT",
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^16.14.0",
-    "slot-machine-gen": "^1.2.6"
+    "react-dom": "^18.2.0",
+    "slot-machine-gen": "^1.3.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.18.6",
-    "@babel/core": "^7.18.0",
-    "@babel/eslint-parser": "^7.17.0",
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.2",
+    "@babel/eslint-parser": "^7.22.15",
     "@babel/plugin-proposal-class-properties": "^7.17.12",
-    "@babel/plugin-proposal-decorators": "^7.18.6",
+    "@babel/plugin-proposal-decorators": "^7.23.2",
     "@babel/plugin-syntax-dynamic-import": "^7.8.3",
-    "@babel/preset-env": "^7.18.0",
-    "@babel/preset-react": "^7.18.6",
-    "@babel/register": "^7.17.7",
+    "@babel/preset-env": "^7.23.2",
+    "@babel/preset-react": "^7.22.15",
+    "@babel/register": "^7.22.15",
     "@node-minify/clean-css": "^4.0.5",
     "@node-minify/cli": "^6.2.0",
     "@node-minify/uglify-js": "^4.0.5",
     "babel-loader": "^8.2.5",
-    "css-loader": "^6.7.3",
-    "eslint": "^8.18.0",
+    "css-loader": "^6.8.1",
+    "eslint": "^8.51.0",
     "mini-css-extract-plugin": "^1.6.2",
     "prop-types": "^15.8.1",
-    "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.1"
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
   },
   "overrides": {
     "braces": "3.0.0",
