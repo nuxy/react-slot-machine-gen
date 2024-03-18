@@ -7,7 +7,11 @@
     "sourceType": "module",
     "ecmaFeatures": {
       "legacyDecorators": true
-    }
+    },
+    "babelOptions": {
+      "configFile": "./.babelrc"
+    },
+    "requireConfigFile": false
   },
   "rules": {
     "no-unused-vars": 0,
