@@ -1,4 +1,6 @@
-# React Slot Machine Generator [![npm version](https://badge.fury.io/js/react-slot-machine-gen.svg)](https://badge.fury.io/js/react-slot-machine-gen) [![](https://img.shields.io/npm/dm/react-slot-machine-gen)](https://www.npmjs.com/package/react-slot-machine-gen)
+# React Slot Machine Generator
+
+[![npm version](https://badge.fury.io/js/react-slot-machine-gen.svg)](https://badge.fury.io/js/react-slot-machine-gen) [![](https://img.shields.io/npm/dm/react-slot-machine-gen)](https://www.npmjs.com/package/react-slot-machine-gen) [![Install size](https://packagephobia.com/badge?p=react-slot-machine-gen)](https://packagephobia.com/result?p=react-slot-machine-gen) [![](https://img.shields.io/github/v/release/nuxy/react-slot-machine-gen)](https://github.com/nuxy/react-slot-machine-gen/releases)
 
 Create an extremely biased, web-based slot machine game.
 
@@ -6,7 +8,7 @@ Create an extremely biased, web-based slot machine game.
 
 ## Features
 
-- Faux-panoramic reel animations (without `<canvas>`)
+- Faux-panoramic reel animations (**3D cylinder**, without `<canvas>`)
 - Support for single/multi-line reels and pay-lines.
 - Pseudo-random selections by configured weight.
 - Configurable RNG (to make it less biased)
@@ -69,7 +71,7 @@ const reels = [
   },
 
   // add more reels ...
-]
+];
 
 export default class Demo extends React.Component {
   constructor() {
