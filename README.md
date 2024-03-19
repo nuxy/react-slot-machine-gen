@@ -29,7 +29,7 @@ Add to an existing [React](https://reactjs.org) project using [YARN](https://yar
 
 ```javascript
 import React       from 'react';
-import SlotMachine from 'react-slot-machine-gen'; // or '../dist/react-slot-machine-gen';
+import SlotMachine from 'react-slot-machine-gen'; // or '../dist/react-slot-machine';
 
 const reels = [
   {
