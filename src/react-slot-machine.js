@@ -34,7 +34,7 @@ class SlotMachine extends React.Component {
   }
 
   render() {
-    return (
+    return React.createElement(
       <div id={this.props.id} className="slot-machine" ref="wrapper"></div>
     );
   }

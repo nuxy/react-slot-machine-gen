@@ -47,7 +47,6 @@
     "@node-minify/clean-css": "^4.0.5",
     "@node-minify/cli": "^6.2.0",
     "@node-minify/uglify-js": "^4.0.5",
-    "babel-loader": "^8.2.5",
     "css-loader": "^6.11.0",
     "eslint": "^8.57.1",
     "mini-css-extract-plugin": "^1.6.2",
