@@ -2,7 +2,7 @@
  *  React Slot Machine
  *  Create an extremely biased, web-based slot machine game.
  *
- *  Copyright 2020-2025, Marc S. Brooks (https://mbrooks.info)
+ *  Copyright 2020-2024, Marc S. Brooks (https://mbrooks.info)
  *  Licensed under the MIT license:
  *  http://www.opensource.org/licenses/mit-license.php
  */
@@ -34,7 +34,7 @@ class SlotMachine extends React.Component {
   }
 
   render() {
-    return React.createElement(
+    return (
       <div id={this.props.id} className="slot-machine" ref="wrapper"></div>
     );
   }

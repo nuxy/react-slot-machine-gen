@@ -144,7 +144,7 @@ class Demo extends React.Component {
   }
 
   render() {
-    return React.createElement(
+    return (
       <React.Fragment>
         <SlotMachine reels={reels} options={options} callback={callback} play={this.state.play} />
 
