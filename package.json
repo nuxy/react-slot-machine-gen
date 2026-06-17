@@ -5,7 +5,7 @@
   "main": "src/react-slot-machine.js",
   "scripts": {
     "build": "babel src -s -D -d dist",
-    "lint": "eslint --ignore-path .gitignore demo src",
+    "lint": "eslint src",
     "prepack": "npm run build",
     "webpack": "webpack-cli ./demo/index.js --config demo/webpack.config.js --output-path demo/assets",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -49,7 +49,7 @@
     "@node-minify/uglify-js": "^4.0.5",
     "babel-loader": "^8.2.5",
     "css-loader": "^6.11.0",
-    "eslint": "^8.57.1",
+    "eslint": "^9.39.4",
     "mini-css-extract-plugin": "^1.6.2",
     "webpack": "^5.105.4",
     "webpack-cli": "^5.1.4"
