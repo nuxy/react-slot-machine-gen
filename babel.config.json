@@ -1,18 +1,9 @@
 {
   "presets": [
     [
-      "@babel/preset-env",
-      {
-        "loose": true,
-        "exclude": [
-          "@babel/plugin-proposal-dynamic-import"
-        ]
-      }
-    ],
-    [ 
       "@babel/preset-react",
       { 
-        "loose": true
+        "runtime": "automatic"
       }
     ]
   ],
