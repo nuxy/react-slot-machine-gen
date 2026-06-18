@@ -9,46 +9,43 @@
 
 'use strict';
 
-import React          from 'react';
-import PropTypes      from 'prop-types';
-import SlotMachineGen from 'slot-machine-gen';
+import {createElement, useEffect, useRef, useState} from 'react';
+import PropTypes from 'prop-types';
+import checkPropTypes from 'prop-types/checkPropTypes';
+import slotMachine from 'slot-machine-gen';
 import 'slot-machine-gen/dist/slot-machine.min.css';
 
 /**
  * Provides React Component wrapper.
  */
-class SlotMachine extends React.Component {
-  componentDidMount() {
-    this.slot = new SlotMachineGen(
-      this.refs.wrapper,
-      this.props.reels,
-      this.props.callback,
-      this.props.options
-    );
-  }
+export default function SlotMachine(props) {
+  const ref = useRef('wrapper');
 
-  componentDidUpdate(prevProps) {
-    if (this.props.play !== prevProps.play) {
-      this.slot.play();
+  checkPropTypes(SlotMachine.propTypes, props);
+
+  const {id = 'slot-machine', reels, callback, options, play} = props;
+
+  const [slot, setSlot] = useState();
+
+  useEffect(() => {
+    setSlot(
+      new slotMachine(
+        ref.current,
+        reels,
+        callback,
+        options
+      )
+    );
+  }, []);
+
+  useEffect(() => {
+    if (play) {
+      slot.play();
     }
-  }
+  }, [play]);
 
-  render() {
-    return React.createElement(
-      'div',
-      {
-        className: 'slot-machine',
-        ref: 'wrapper',
-        id: this.props.id
-      }
-    );
-  }
+  return createElement('div', {ref, id, className: 'slot-machine'});
 }
-
-SlotMachine.defaultProps = {
-  id: 'slot-machine',
-  play: false,
-};
 
 SlotMachine.propTypes = {
   id: PropTypes.string,
@@ -57,5 +54,3 @@ SlotMachine.propTypes = {
   callback: PropTypes.func,
   options: PropTypes.object
 };
-
-export default SlotMachine;

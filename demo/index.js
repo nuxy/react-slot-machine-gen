@@ -1,6 +1,6 @@
-import React       from 'react';
-import ReactDOM    from 'react-dom';
-import SlotMachine from '../dist/react-slot-machine';
+import {Fragment, useState} from 'react';
+import {createRoot} from 'react-dom/client';
+import SlotMachine  from '../dist/react-slot-machine';
 
 const imageUrl = 'https://nuxy.github.io/slot-machine-gen/images';
 const soundUrl = 'https://nuxy.github.io/slot-machine-gen/sounds';
@@ -128,30 +128,21 @@ const callback = function(payLine) {
   }
 };
 
-class Demo extends React.Component {
-  constructor() {
-    super();
+const Demo = function() {
+  const [play, setPlay] = useState(false);
 
-    this.state = {
-      play: false
-    };
-  }
+  const clickEvent = () => setPlay(true);
+  const mouseEvent = () => setPlay(false);
 
-  playEvent() {
-    this.setState({
-      play: !this.state.play
-    });
-  }
 
-  render() {
-    return (
-      <React.Fragment>
-        <SlotMachine reels={reels} options={options} callback={callback} play={this.state.play} />
+  return (
+    <Fragment>
+      <SlotMachine reels={reels} options={options} callback={callback} play={play} />
 
-        <button id="play-button" onClick={() => this.playEvent()}>Play</button>
-      </React.Fragment>
-    );
-  }
+      <button id="play-button" onClick={clickEvent} onMouseUp={mouseEvent}>Play</button>
+    </Fragment>
+  );
 }
 
-ReactDOM.render(<Demo />, document.getElementById('main'));
+const root = createRoot(document.getElementById('main'));
+root.render(<Demo />);
