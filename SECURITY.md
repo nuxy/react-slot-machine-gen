@@ -1,0 +1,21 @@
+# Security Policy
+
+## Supported releases
+
+| Version | Supported          |
+| ------- | ------------------ |
+| 1.4.3   | :white_check_mark: (security updates only) |
+
+## Frequency of updates
+
+[Dependabot](https://docs.github.com/en/code-security/tutorials/secure-your-dependencies/dependabot-quickstart-guide#about-dependabot) may report security issues related to this project but **100% of the time it's related to a third-party dependency** that is only used when generating the demo (the library iself has **no dependencies**).
+
+That being said, the urgency of resolving these flagged issues is minimal, at best, considering new issues seems to be reported on a weekly basis.
+
+## Reporting an issue
+
+If you find a vulnerability with this package, please report it [here](https://github.com/nuxy/react-slot-machine-gen/issues) for full disclosure.
+
+## Contributions
+
+If you fix a bug, or have a code you want to contribute, please send a pull-request with your changes. (Note: Before committing your code please ensure that you are following the [Node.js style guide](https://github.com/felixge/node-style-guide))
