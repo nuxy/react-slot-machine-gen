@@ -13,3 +13,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0) a
 ## [2.0.0] - 2026-07-02
 
 - Support for [React v19](https://react.dev/blog/2024/12/05/react-19) (deprecate v18)
+
+## [2.0.1] - 2026-07-02
+
+- Updated documented examples
