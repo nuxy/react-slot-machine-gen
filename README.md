@@ -25,12 +25,18 @@ Checkout the [demo](https://nuxy.github.io/slot-machine-gen) for examples of use
 
 Add to an existing [React](https://reactjs.org) project using [YARN](https://yarnpkg.com).
 
-    $ yarn add react-slot-machine-gen
+### React [v19](https://react.dev)
+
+    $ yarn add react-slot-machine
+
+### React [v18](https://18.react.dev)
+
+    $ yarn add react-slot-machine@1.4
 
 ## Usage
 
 ```javascript
-import React       from 'react';
+import {Fragment, useState} from 'react';
 import SlotMachine from 'react-slot-machine-gen'; // or '../dist/react-slot-machine';
 
 const reels = [
@@ -67,36 +73,24 @@ const reels = [
         position: 1100,
         weight: 5
       }
-    }
+    ]
   },
 
   // add more reels ...
 ];
+export default function Demo() {
+  const [play, setPlay] = useState(false);
 
-export default class Demo extends React.Component {
-  constructor() {
-    super();
+  const clickEvent = () => setPlay(true);
+  const mouseEvent = () => setPlay(false);
 
-    this.state = {
-      play: false
-    };
-  }
+  return (
+    <Fragment>
+      <SlotMachine reels={reels} play={play} />
 
-  playEvent() {
-    this.setState({
-      play: !this.state.play
-    });
-  }
-
-  render() {
-    return (
-      <React.Fragment>
-        <SlotMachine reels={reels} play={this.state.play} />
-
-        <button id="play-button" onClick={() => this.playEvent()}>Play</button>
-      </React.Fragment>
-    );
-  }
+      <button id="play-button" onClick={clickEvent} onMouseUp={mouseEvent}>Play</button>
+    </Fragment>
+  );
 };
 ```
 
