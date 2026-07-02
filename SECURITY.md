@@ -4,7 +4,8 @@
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 1.4.3   | :white_check_mark: (security updates only) |
+| 1.4.x   | :white_check_mark: (security updates only) |
+| 2.x     | :white_check_mark: |
 
 ## Frequency of updates
 
