@@ -17,3 +17,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0) a
 ## [2.0.1] - 2026-07-02
 
 - Updated documented examples
+
+## [2.0.2] - 2026-08-30
+
+- Upgraded outdated NPM dependencies / NPM security updates
+- Removed deprecated (unused) Babel plugins
