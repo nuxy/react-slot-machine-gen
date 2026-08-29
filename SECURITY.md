@@ -4,7 +4,7 @@
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 1.4.x   | :white_check_mark: (security updates only) |
+| 1.x     | :x:                |
 | 2.x     | :white_check_mark: |
 
 ## Frequency of updates
